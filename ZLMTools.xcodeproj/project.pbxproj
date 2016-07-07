@@ -32,6 +32,7 @@
 		AE99A3FA1D2C954500A18098 /* UIImage+Expansion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Expansion.m"; sourceTree = "<group>"; };
 		AE99A3FB1D2C954500A18098 /* UIView+Touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Touch.h"; sourceTree = "<group>"; };
 		AE99A3FC1D2C954500A18098 /* UIView+Touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Touch.m"; sourceTree = "<group>"; };
+		AEA1C5011D2DE96600A5A011 /* ZLMTools-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZLMTools-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +82,7 @@
 		AE99A3E11D2C946D00A18098 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AEA1C5011D2DE96600A5A011 /* ZLMTools-Prefix.pch */,
 				AE99A3E21D2C946D00A18098 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -285,6 +287,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZLMTools/ZLMTools-Prefix.pch";
 				INFOPLIST_FILE = ZLMTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lrts.www.ZLMTools;
@@ -296,6 +300,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ZLMTools/ZLMTools-Prefix.pch";
 				INFOPLIST_FILE = ZLMTools/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lrts.www.ZLMTools;
