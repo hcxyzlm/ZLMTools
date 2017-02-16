@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE0BA9671E559B5B00E7483F /* ObjcRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0BA9661E559B5B00E7483F /* ObjcRuntime.m */; };
 		AE99A3E31D2C946D00A18098 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE99A3E21D2C946D00A18098 /* main.m */; };
 		AE99A3E61D2C946D00A18098 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE99A3E51D2C946D00A18098 /* AppDelegate.m */; };
 		AE99A3E91D2C946D00A18098 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE99A3E81D2C946D00A18098 /* ViewController.m */; };
@@ -18,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE0BA9651E559B5B00E7483F /* ObjcRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcRuntime.h; sourceTree = "<group>"; };
+		AE0BA9661E559B5B00E7483F /* ObjcRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcRuntime.m; sourceTree = "<group>"; };
 		AE99A3DE1D2C946D00A18098 /* ZLMTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLMTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE99A3E21D2C946D00A18098 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE99A3E41D2C946D00A18098 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE0BA9641E559B5B00E7483F /* ObjcRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				AE0BA9651E559B5B00E7483F /* ObjcRuntime.h */,
+				AE0BA9661E559B5B00E7483F /* ObjcRuntime.m */,
+			);
+			path = ObjcRuntime;
+			sourceTree = "<group>";
+		};
 		AE99A3D51D2C946D00A18098 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +103,7 @@
 		AE99A3F81D2C954500A18098 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				AE0BA9641E559B5B00E7483F /* ObjcRuntime */,
 				AE99A3F91D2C954500A18098 /* UIImage+Expansion.h */,
 				AE99A3FA1D2C954500A18098 /* UIImage+Expansion.m */,
 				AE99A3FB1D2C954500A18098 /* UIView+Touch.h */,
@@ -169,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0BA9671E559B5B00E7483F /* ObjcRuntime.m in Sources */,
 				AE99A3E91D2C946D00A18098 /* ViewController.m in Sources */,
 				AE99A3E61D2C946D00A18098 /* AppDelegate.m in Sources */,
 				AE99A3E31D2C946D00A18098 /* main.m in Sources */,
