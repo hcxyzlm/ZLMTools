@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    // change by develope
+    // change by test1
 }
 
 - (void)didReceiveMemoryWarning {
