@@ -15,6 +15,7 @@
 // 所有类方法
 + (NSArray *)classMethods;
 
+// 所有实例方法
 + (NSArray *)instanceMethods;
 
 // 所有成员属性，共有私有属性，以及扩展属性
@@ -26,6 +27,7 @@
 
 + (NSArray *)protocols;
 
+// 获取成员变量
 - (NSArray *)IvarList;
 
 @end
