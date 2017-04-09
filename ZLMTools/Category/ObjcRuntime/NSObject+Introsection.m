@@ -75,7 +75,7 @@
     // 获取类对象类名
     NSString *className = NSStringFromClass(self);
     // OC -> C .UTF8String
-    // 获取元类
+    
     Class metaClass = objc_getClass(className.UTF8String);
     // 获取Method数组
     Method *methodList = class_copyMethodList(metaClass, &count);
@@ -111,17 +111,16 @@
     NSString *className = NSStringFromClass(self);
     // OC -> C .UTF8String
     // 获取元类
-    Class metaClass = objc_getMetaClass(className.UTF8String);
+    Class metaClass = objc_getClass(className.UTF8String);
     
     NSMutableArray *boxedProperties = [NSMutableArray array];
     unsigned int propertyCount = 0;
-    Ivar *propertyList = class_copyIvarList(metaClass, &propertyCount);
+    objc_property_t *propertyList = class_copyPropertyList(metaClass, &propertyCount);
     if (propertyList) {
         for (unsigned int i = 0; i < propertyCount; i++) {
-            Ivar ivar = propertyList[i];
-            const char * name = ivar_getName(ivar);
-            const char * type = ivar_getTypeEncoding(ivar);
-            [boxedProperties addObject:[NSString stringWithFormat:@"%s --->  %s", type, name]];
+            
+            const char *propertyName = property_getName(propertyList[i]);
+            [boxedProperties addObject:[NSString stringWithUTF8String:propertyName]];
         }
         free(propertyList);
     }
@@ -167,5 +166,30 @@
         free(protocolList);
     }
     return protocols;
+}
+
++(NSArray*)IvarList
+{
+    NSString *className = NSStringFromClass(self);
+    // OC -> C .UTF8String
+    Class metaClass = objc_getClass(className.UTF8String);
+    
+    NSMutableArray *boxedProperties = [NSMutableArray array];
+    unsigned int propertyCount = 0;
+    Ivar *ivarList = class_copyIvarList(metaClass, &propertyCount);
+    if (ivarList) {
+        for (unsigned int i = 0; i < propertyCount; i++) {
+            Ivar ivar = ivarList[i];
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:2];
+            const char *ivarName = ivar_getName(ivar);
+            const char *ivarType = ivar_getTypeEncoding(ivar);
+            
+            dict[@"type"] = [NSString stringWithUTF8String:ivarType];
+            dict[@"ivarName"] = [NSString stringWithUTF8String:ivarName];
+            [boxedProperties addObject:dict];
+        }
+        free(ivarList);
+    }
+    return boxedProperties;
 }
 @end

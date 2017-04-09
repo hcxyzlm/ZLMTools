@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AE0BA9671E559B5B00E7483F /* ObjcRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = AE0BA9661E559B5B00E7483F /* ObjcRuntime.m */; };
+		AE1028A91E9A7E4800CCE2C6 /* NSObject+Introsection.m in Sources */ = {isa = PBXBuildFile; fileRef = AE1028A81E9A7E4800CCE2C6 /* NSObject+Introsection.m */; };
 		AE99A3E31D2C946D00A18098 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE99A3E21D2C946D00A18098 /* main.m */; };
 		AE99A3E61D2C946D00A18098 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE99A3E51D2C946D00A18098 /* AppDelegate.m */; };
 		AE99A3E91D2C946D00A18098 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE99A3E81D2C946D00A18098 /* ViewController.m */; };
@@ -21,6 +22,8 @@
 /* Begin PBXFileReference section */
 		AE0BA9651E559B5B00E7483F /* ObjcRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjcRuntime.h; sourceTree = "<group>"; };
 		AE0BA9661E559B5B00E7483F /* ObjcRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjcRuntime.m; sourceTree = "<group>"; };
+		AE1028A71E9A7E4800CCE2C6 /* NSObject+Introsection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Introsection.h"; path = "ObjcRuntime/NSObject+Introsection.h"; sourceTree = "<group>"; };
+		AE1028A81E9A7E4800CCE2C6 /* NSObject+Introsection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Introsection.m"; path = "ObjcRuntime/NSObject+Introsection.m"; sourceTree = "<group>"; };
 		AE99A3DE1D2C946D00A18098 /* ZLMTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLMTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE99A3E21D2C946D00A18098 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE99A3E41D2C946D00A18098 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 		AE99A3F81D2C954500A18098 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				AE1028A71E9A7E4800CCE2C6 /* NSObject+Introsection.h */,
+				AE1028A81E9A7E4800CCE2C6 /* NSObject+Introsection.m */,
 				AE0BA9641E559B5B00E7483F /* ObjcRuntime */,
 				AE99A3F91D2C954500A18098 /* UIImage+Expansion.h */,
 				AE99A3FA1D2C954500A18098 /* UIImage+Expansion.m */,
@@ -185,6 +190,7 @@
 				AE0BA9671E559B5B00E7483F /* ObjcRuntime.m in Sources */,
 				AE99A3E91D2C946D00A18098 /* ViewController.m in Sources */,
 				AE99A3E61D2C946D00A18098 /* AppDelegate.m in Sources */,
+				AE1028A91E9A7E4800CCE2C6 /* NSObject+Introsection.m in Sources */,
 				AE99A3E31D2C946D00A18098 /* main.m in Sources */,
 				AE99A3FE1D2C954500A18098 /* UIView+Touch.m in Sources */,
 				AE99A3FD1D2C954500A18098 /* UIImage+Expansion.m in Sources */,
